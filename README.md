@@ -36,12 +36,3 @@
 ### Deployment
 - **GitHub Pages** - Free hosting with CI/CD
 - **GitHub Actions** - Automated deployment pipeline
-
-## 📦 Installation
-
-### Prerequisites
-- Node.js 18.x or higher
-- npm, pnpm, or yarn
-
-### Clone Repository
-```bash
