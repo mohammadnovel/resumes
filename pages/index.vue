@@ -25,7 +25,7 @@
             @click.prevent="scrollToSection('hero')"
             class="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent cursor-pointer"
           >
-            Novel.dev
+            Monvear
           </a>
 
           <!-- Desktop Menu -->
@@ -136,7 +136,7 @@
                 <span
                   class="block bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400 bg-clip-text text-transparent"
                 >
-                  Novel
+                  Moh. Novel AR
                 </span>
               </h1>
               <div
@@ -185,7 +185,7 @@
                 class="px-4 py-2 rounded-lg bg-gray-900/50 border border-gray-800 text-sm text-gray-400 flex items-center gap-2 hover:border-blue-500/50 transition-all"
               >
                 <Icon name="mdi:database" class="text-lg text-blue-400" />
-                PostgreSQL
+                SQL & NoSql
               </div>
               <div
                 class="px-4 py-2 rounded-lg bg-gray-900/50 border border-gray-800 text-sm text-gray-400 flex items-center gap-2 hover:border-emerald-500/50 transition-all"
@@ -905,10 +905,10 @@
           class="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left"
         >
           <p class="text-gray-500 text-xs sm:text-sm">
-            © {{ new Date().getFullYear() }} Moh. Novel Anugrah R. All rights
-            reserved.
+            © {{ new Date().getFullYear() }} 
           </p>
-          <p class="text-gray-600 text-xs">Built with Nuxt.js & Tailwind CSS</p>
+          <p class="text-gray-600 text-xs">Moh. Novel Anugrah R. All rights
+            reserved.</p>
         </div>
       </div>
     </footer>
