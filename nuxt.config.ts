@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
   
   app: {
-    baseURL: '/resumes/', // ⚠️ Sesuaikan dengan nama repo GitHub Anda
+    baseURL: '/resumes/', // ⚠️ HARUS sama dengan nama repo
     buildAssetsDir: 'assets',
     head: {
       title: 'Moh. Novel Anugrah R - Backend Developer',
@@ -13,41 +13,25 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { 
           name: 'description', 
-          content: 'Backend Developer with 6+ years experience in Node.js, Laravel, PostgreSQL, MongoDB. Experienced in building scalable web applications.' 
-        },
-        { 
-          name: 'keywords', 
-          content: 'Backend Developer, Node.js, Laravel, PostgreSQL, MongoDB, API Development, Fullstack Developer' 
-        },
-        { name: 'author', content: 'Moh. Novel Anugrah R' }
+          content: 'Backend Developer with 6+ years experience in Node.js, Laravel, PostgreSQL, MongoDB' 
+        }
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' },
-        { rel: 'icon', type: 'image/x-icon', href: '/resumes/favicon.ico' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap' }
       ]
     }
   },
   
-  ssr: false,
+  ssr: false, // ⚠️ PENTING untuk static site
   
   compatibilityDate: '2024-11-15',
 
-  vite: {
-    server: {
-      hmr: {
-        protocol: 'ws',
-        host: 'localhost',
-      },
-      watch: {
-        usePolling: true,
-      }
-    }
-  },
-
   nitro: {
+    preset: 'static', // ⚠️ PENTING
     output: {
+      dir: '.output',
       publicDir: '.output/public'
     }
   }
