@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
   
   app: {
-    baseURL: '/resumes/', // ⚠️ HARUS sama dengan nama repo
-    buildAssetsDir: 'assets',
+    baseURL: '/resumes/',
+    buildAssetsDir: '_nuxt/', // ✅ Changed from 'assets'
     head: {
       title: 'Moh. Novel Anugrah R - Backend Developer',
       meta: [
@@ -24,15 +24,22 @@ export default defineNuxtConfig({
     }
   },
   
-  ssr: false, // ⚠️ PENTING untuk static site
+  ssr: false,
   
   compatibilityDate: '2024-11-15',
 
   nitro: {
-    preset: 'static', // ⚠️ PENTING
+    preset: 'static',
     output: {
       dir: '.output',
       publicDir: '.output/public'
+    }
+  },
+
+  // ✅ Add this to ensure proper asset handling
+  router: {
+    options: {
+      hashMode: false
     }
   }
 })
