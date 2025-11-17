@@ -929,6 +929,8 @@ const mobileMenuOpen = ref(false);
 const scrollProgress = ref(0);
 const isScrolled = ref(false);
 const activeSection = ref("hero");
+const skillsHeaderVisible = ref(false);
+const skillsHeaderRef = ref(null);
 
 const navigation = [
   {

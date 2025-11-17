@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   
   app: {
     baseURL: '/resumes/',
+    // baseURL: '/',
     buildAssetsDir: '_nuxt/',
     head: {
       title: 'Moh. Novel Anugrah R - Backend Developer',
@@ -26,7 +27,6 @@ export default defineNuxtConfig({
     }
   },
   
-  // ✅ PENTING: Tetap true untuk generate CSS
   ssr: true,
   
   compatibilityDate: '2024-11-15',
@@ -43,14 +43,14 @@ export default defineNuxtConfig({
     }
   },
 
+  // ✅ TAMBAHKAN INI - Disable features yang menyebabkan 404
   experimental: {
     payloadExtraction: false,
-    // ✅ Disable rendering JSON payloads
     renderJsonPayloads: false
   },
 
-  // ✅ Disable resource hints yang menyebabkan preload errors
-  features: {
-    inlineStyles: false
+  // ✅ TAMBAHKAN INI - Ensure proper routing
+  routeRules: {
+    '/resumes/**': { ssr: true }
   }
 })
