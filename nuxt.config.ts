@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/resumes/',
     buildAssetsDir: '_nuxt/',
-    cdnURL: '/resumes/', // ✅ TAMBAHKAN INI
     head: {
       title: 'Moh. Novel Anugrah R - Backend Developer',
       meta: [
@@ -27,6 +26,7 @@ export default defineNuxtConfig({
     }
   },
   
+  // ✅ PENTING: Tetap true untuk generate CSS
   ssr: true,
   
   compatibilityDate: '2024-11-15',
@@ -37,7 +37,20 @@ export default defineNuxtConfig({
       dir: '.output',
       publicDir: '.output/public'
     },
-    // ✅ TAMBAHKAN INI
-    baseURL: '/resumes/'
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
+  },
+
+  experimental: {
+    payloadExtraction: false,
+    // ✅ Disable rendering JSON payloads
+    renderJsonPayloads: false
+  },
+
+  // ✅ Disable resource hints yang menyebabkan preload errors
+  features: {
+    inlineStyles: false
   }
 })
