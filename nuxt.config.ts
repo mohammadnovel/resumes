@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/resumes/',
     buildAssetsDir: '_nuxt/',
+    cdnURL: '/resumes/', // ✅ TAMBAHKAN INI
     head: {
       title: 'Moh. Novel Anugrah R - Backend Developer',
       meta: [
@@ -26,7 +27,6 @@ export default defineNuxtConfig({
     }
   },
   
-  // ✅ UBAH DARI false JADI true
   ssr: true,
   
   compatibilityDate: '2024-11-15',
@@ -36,11 +36,8 @@ export default defineNuxtConfig({
     output: {
       dir: '.output',
       publicDir: '.output/public'
-    }
-  },
-
-  // ✅ TAMBAHKAN INI untuk client-side hydration
-  experimental: {
-    payloadExtraction: false
+    },
+    // ✅ TAMBAHKAN INI
+    baseURL: '/resumes/'
   }
 })
