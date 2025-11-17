@@ -3,9 +3,11 @@ export default defineNuxtConfig({
   
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
   
+  css: ['~/assets/css/tailwind.css'], // ✅ PENTING!
+  
   app: {
     baseURL: '/resumes/',
-    buildAssetsDir: '_nuxt/', // ✅ Changed from 'assets'
+    buildAssetsDir: '_nuxt/',
     head: {
       title: 'Moh. Novel Anugrah R - Backend Developer',
       meta: [
@@ -33,13 +35,6 @@ export default defineNuxtConfig({
     output: {
       dir: '.output',
       publicDir: '.output/public'
-    }
-  },
-
-  // ✅ Add this to ensure proper asset handling
-  router: {
-    options: {
-      hashMode: false
     }
   }
 })
