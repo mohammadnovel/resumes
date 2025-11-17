@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   
   app: {
-    baseURL: '/resumes/',
+    baseURL: '/',
     // baseURL: '/',
     buildAssetsDir: '_nuxt/',
     head: {
