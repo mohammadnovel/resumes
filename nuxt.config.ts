@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
   
-  css: ['~/assets/css/tailwind.css'], // ✅ PENTING!
+  css: ['~/assets/css/tailwind.css'],
   
   app: {
     baseURL: '/resumes/',
@@ -26,7 +26,8 @@ export default defineNuxtConfig({
     }
   },
   
-  ssr: false,
+  // ✅ UBAH DARI false JADI true
+  ssr: true,
   
   compatibilityDate: '2024-11-15',
 
@@ -36,5 +37,10 @@ export default defineNuxtConfig({
       dir: '.output',
       publicDir: '.output/public'
     }
+  },
+
+  // ✅ TAMBAHKAN INI untuk client-side hydration
+  experimental: {
+    payloadExtraction: false
   }
 })
