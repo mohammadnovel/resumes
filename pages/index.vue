@@ -880,7 +880,7 @@
 
           <div class="flex gap-6 justify-center">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/mohammadnovel"
               target="_blank"
               class="text-gray-400 hover:text-blue-400 transition-colors"
             >
